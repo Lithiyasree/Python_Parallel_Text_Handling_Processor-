@@ -99,7 +99,7 @@ def process_review(text):
 
 print("Loading CSV...")
 
-with open(r"C:\Users\rlith\OneDrive\Desktop\INFOSYS SPRINGBOARD INTERN\TASK\TASK-3 (SENTIMENT_PROCESSOR)\amazon-product-reviews.csv", "r", encoding="utf-8") as file:
+with open(r"amazon-product-reviews.csv", "r", encoding="utf-8") as file:
     reader = csv.DictReader(file)
     reviews = list(reader)[:1000000]   # Process up to 1M
 
@@ -109,7 +109,7 @@ print("Total Records Loaded:", len(reviews))
 # DATABASE SETUP
 
 
-conn = sqlite3.connect("amazon_aspect_sentiment.db")
+conn = sqlite3.connect("C:\\Users\\rlith\\OneDrive\\Desktop\\INFOSYS SPRINGBOARD INTERN\\TASK\\TASK-4 (STORAGE IMPROVE)\\amazon-product-reviews.db")
 cursor = conn.cursor()
 
 cursor.execute("""
